@@ -1,0 +1,16 @@
+APP_NAME=api
+GIT_URL=https://github.com/rofrba/hello-service
+GIT_REF=master
+GIT_SSL_VERIFY='false'
+IMAGE_REGISTRY=image-registry.openshift-image-registry.svc:5000
+NAMESPACE_OCP=api-dev
+NAMESPACE_REGISTRY=api-dev
+IMAGE_PULL_SECRET=unused
+BUILD_TYPE_TASK=Task
+GITOPS_GITLAB_URL=https://github.com/rofrba/templates
+GITOPS_REVISION_URL=main
+GITOPS_CONTEXT=staging
+GITOPS_FILE=deployment.yaml
+GITOPS_SSL_VERIFY='false'
+PACKAGE_MANAGER_PARAM='MAVEN_MIRROR_URL'
+PACKAGE_MANAGER_URL=''

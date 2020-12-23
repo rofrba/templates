@@ -1,0 +1,27 @@
+- image pull secret para la registry interna "docker-registry-authfile" con credencial el token del SA "pipeline"
+- secret del tipo source para github con el annotation tekton.dev/git-0: "https://github.com"
+- asignar los secrets al SA "pipeline"
+- generar los 2 pvs que menciona el template gitops-APP_NAME y shared-workspace-APP_NAME
+
+
+
+example pipeline run 
+
+apiVersion: tekton.dev/v1beta1
+kind: PipelineRun
+metadata:
+  # pone el nombre que quieras
+  generateName: api-1-
+spec:
+  pipelineRef:
+    # name del pipeline creado
+    name: api-ci
+  workspaces:
+  - name: shared-workspace
+    persistentVolumeClaim:
+        #cambiar por el nombre del pvc creado
+      claimName: shared-workspace-api
+  - name: gitops
+    persistentVolumeClaim:
+    #cambiar por el nombre del pvc creado
+      claimName: gitops-api
