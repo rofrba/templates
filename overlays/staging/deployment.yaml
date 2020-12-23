@@ -7,4 +7,4 @@ spec:
     spec:
       containers:
         - name: hello-openshift
-          image: image-registry.openshift-image-registry.svc:5000/api-dev/api:4
+          image: image-registry.openshift-image-registry.svc:5000/api-dev/api:5
