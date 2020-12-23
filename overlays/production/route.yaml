@@ -1,0 +1,7 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: api
+spec:
+  to:
+    name: jufejus-api-prod
