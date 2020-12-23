@@ -8,4 +8,4 @@ spec:
       replicas: 4
       containers:
         - name: hello-openshift
-          image: ''
+          image: image-registry.openshift-image-registry.svc:5000/api-dev/api:1
