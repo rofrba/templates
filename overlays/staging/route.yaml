@@ -1,0 +1,7 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: example
+spec:
+  to:
+    name: jufejus-api-staging
